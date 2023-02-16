@@ -24,7 +24,7 @@ I think it is reasonable to remove the SD card from the pitaya (just need to pus
 
 ## How to edit IP address on PI?
 
-We need to change IP address for the raspberry pi so that we use both the remote connection and pi can access the pitaya and thereby the scanner. This modification still needs to be implemented.
+We need to change IP address for the raspberry pi so that we use both the remote connection and pi can access the pitaya and thereby the scanner. To edit the IP address on the PI, type in "nano /etc/network/interfaces". In the interfaces file edit the static IP to desired IP address and the router to default gateway of 192.168.1.1.
 
 ## Other ideas?
 
