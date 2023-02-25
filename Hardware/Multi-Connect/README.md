@@ -10,7 +10,7 @@ There a couple file that handle IP configuration for pitaya.
 
 There is resolv.conf located in /etc folder. This should not be edited. Inside of it should be "nameserver 192.168.1.1". This file informs the pitaya to search for default gateway IP 192.168.1.1 for network communication.
 
-The second file in /etc/network/interfaces. This file allows us to change the static IP address. The provided interfaces file is the modified version for the pitaya to have IP address 192.168.1.82. Note: lines 19-20 are commented so that pitaya does not connect with DHCP and line 27 allows us to change the IP address.
+The second file in /etc/network/interfaces. This file allows us to change the static IP address and assign hardware address for each pitaya. The provided interfaces file is the modified version for the pitaya to have IP address 192.168.1.82. Note: lines 19-20 are commented so that pitaya does not connect with DHCP and line 27 allows us to change the IP address.
 
 For more information on changing the pitaya IP address: https://mxii.eu.org/2016/03/18/redpitaya-direct-connection/ 
 
@@ -24,9 +24,12 @@ I think it is reasonable to remove the SD card from the pitaya (just need to pus
 
 ## How to edit IP address on PI?
 
-We need to change IP address for the raspberry pi so that we use both the remote connection and pi can access the pitaya and thereby the scanner. This modification still needs to be implemented.
+We need to change IP address for the raspberry pi so that we use both the remote connection and pi can access the pitaya and thereby the scanner. To edit the IP address on the PI, type in "nano /etc/network/interfaces". In the interfaces file edit the static IP to desired IP address and the router to default gateway of 192.168.1.1.
 
 ## Other ideas?
 
 We were thinking initially to try connecting to the Pi via usb debugging, but that more complicated than a network based ssh connection. So this method allows for remote debugging as well. 
 
+## Notes
+
+We ran into issues where the pitayas all had the same MAC addresses because they weren't set in the interfaces file. After we corrected for that as used the IP addresses as listed on each pitaya, then network traffic became much more smooth and efficient. The routing table with the switch must have been confusing the MAC and IP addresses for the pitayas in its lookup table.
