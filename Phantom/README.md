@@ -2,9 +2,7 @@
 
 ## Field of View
 
-Phantoms designers must be aware of the limited intrinsic FOV of the RF coil. This FOV spans 20mm along the axis of the bore. The FOV center is 15mm from the bottom of the bore. 
-
-Approx. 1 mL of liquid fills to the sample center of FOV (15 mm above base). It is very helpful to use a dropper to minimize trial and error
+Phantoms designers must be aware of the limited intrinsic FOV of the RF coil. This FOV spans 20mm along the axis of the bore. The FOV center is 15mm from the bottom of the bore.
 
 ## Containers
 
