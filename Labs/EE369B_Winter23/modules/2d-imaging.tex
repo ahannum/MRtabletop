@@ -1,0 +1,99 @@
+\newpage
+\subsection{2D Imaging}
+
+In this module we recruit two gradient channels to enable imaging in two spatial dimensions. To do this we will use the basic 2DFT sequence you have learned about in class.
+
+Implementation of a 2DFT sequence requires that we specify the amplitude and duration of gradient waveforms. These parameters follow from the imaging prescription, i.e. field-of-view (FOV) and resolution. Let us recall a few concepts from class to elucidate this design calculation.
+
+\begin{enumerate}
+    \item   The time integral of an encoding gradient tells us where we are in sampling k-space along the axis corresponding to that gradient. In equation form, we have
+    \begin{equation}
+        k(t)=\frac{\gamma}{2\pi} \int_{0}^{t} G(\tau) d\tau
+    \end{equation}
+    \item   The extent of coverage in one domain (object or k-space) corresponds to the reciprocal of resolution in the transform domain. In equation form, we have
+    \begin{equation}
+        \Delta k=\frac{1}{FOV}; \; k_{max}=\frac{1}{2\Delta x}
+    \end{equation}
+\end{enumerate}
+
+Now with a concrete example we can combine these equations to design the gradient parameters. Say we want a 256 mm FOV and 2 mm resolution ($\delta$). Assume the hardware provides a perfect rectangle waveform and the sampling period $\Delta t$ is 30 $\mu$s. Combining the above equations yields the following readout amplitude $G_{xr}$ and duration $\tau_x$ for readout along $x$.
+
+\begin{equation*}
+    G_{xr}=\frac{1}{\frac{\gamma}{2\pi} \text{FOV}_x \Delta t} \approx 3 \; \text{mT/m}
+\end{equation*}
+
+\begin{equation*}
+    \tau_x=\frac{1}{\frac{\gamma}{2\pi}G_{xr} \delta_x} \approx 4 \; \text{ms}
+\end{equation*}
+
+A similar calculation can be done for the phase encoding gradient but we will not review that here. For the exact equations you can refer to pages 86 and 90 of the textbook\footnote{Nishimura, Dwight G. \emph{Principles of Magnetic Resonance Imaging}, Lulu.com, 2010.}.
+
+The Relax 2.0 program computes gradient parameters in a similar manner as shown above, with the added step of calculating the current necessary to achieve the gradient strength. In the following sections you will not have to repeat the above calculations, but it is important to understand how these values are computed behind the scenes.
+
+\subsubsection{Spin Echo} \label{sec:spin-echo}
+
+In previous modules you used a spin echo sequence for spectroscopy (no gradients) and projection imaging (one gradient during readout). Now we will use it for 2D imaging, by adding a second gradient to perform phase encoding prior to each readout. In this way each readout can acquire a different line of k-space.
+
+\vspace{5mm}
+
+\noindent{}\color{red}
+
+Sketch the pulse sequence diagram for a 2DFT spin echo pulse sequence.
+\vspace{5mm}
+
+Consider the effect of swapping axes for readout and phase encode gradients. How does the k-space trajectory change? Would the image change? Explain.
+
+\color{black}
+
+\vspace{5mm}
+
+\emph{As a reminder, you should re-center the RF Frequency if you have not done so recently (see Calibration module, use the Spectroscopy Spin Echo, etc).}
+
+\vspace{5mm}
+
+Now let's get to imaging!
+
+\begin{enumerate}
+    \item Insert the gray star phantom.
+    \item Navigate to the main menu. Click \textbf{Imaging} and select the \textbf{2D Spin Echo} sequence.
+    \item Open \textbf{Parameters}. Under \emph{General}, set TE to 10 ms, TR to 1000 ms, Sampling Time to 6 ms. Under \emph{Imaging}, set Image Orientation to ZX, Image Resolution to 64 pixels, FOV to 30 mm.
+    \item Click \textbf{Acquire}. This sequence takes a long time to run because it takes many repetitions to fill 2D k-space at just one line per excitation.
+    
+\noindent{}\color{red}
+Propose 3 sequence modifications that could reduce the scan time. Hint: you will not have to implement these changes so you need not limit yourself to the options available in the GUI.
+\color{black}  
+
+    \item When the sequence finishes, click \textbf{Process Data}. You will then see a 2x2 grid of magnitude and phase images for both k-space and the object domain.
+
+\noindent{}\color{red}Include a screenshot of the resulting spin echo images. Comment on the image quality and any notable features you observe, such as k-space structure or image artifacts, if any exist.
+\noindent{}\color{black}
+
+    \item Change the Image Resolution to 128 pixels and run the sequence again.
+
+\noindent{}\color{red}
+Include a screenshot of the resulting images. Compare image quality with the previous lower resolution image and explain any difference besides resolution.
+\noindent{}\color{black}
+
+    %\item Change the FOV and Image Resolution to a different combination and run the sequence again.
+
+%\noindent{}\color{red}Q: Comment on the changes you observe with this third parameter set. Did your changes positively or negatively affect image quality? Why?
+\color{black}
+
+\end{enumerate}
+
+\subsubsection{Gradient Echo}
+Now we will run a 2D gradient echo sequence for comparison. 
+
+\begin{enumerate}
+\item	Use the same water shape phantom as you did for the spin echo section above.
+\item   Navigate to the main menu. Click \textbf{Imaging} and select the \textbf{2D Gradient Echo} sequence.
+\item   Use the same parameters as in \ref{sec:spin-echo} (reverting Image Resolution back to 64 pixels).
+\item   Click \textbf{Acquire}. This will take about as long as the 2D spin echo sequence.
+\item   When the sequence finishes, click \textbf{Process Data}.
+\end{enumerate}
+
+\noindent{}\color{red}Include a screenshot of the resulting gradient echo images. Comment on how these images compare with the spin echo images you acquired before and explain any differences. Hint: recall the spectroscopy module, where you compared FID with spin echo.
+
+Propose a change in sequence parameters that could improve the gradient echo image and explain any trade-offs.
+\noindent{}\color{black}
+% soln: shorten the echo time and sampling time. Tradeoff between SNR and T2* dephasing. Worthwhile in this case because B0 inhomogeneity is severe, so T2* dephasing is dominant.

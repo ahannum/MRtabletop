@@ -1,0 +1,44 @@
+\newpage
+\subsection{K-space Manipulation}
+If we have time in class, you may begin this section. We will be working with a brain dataset and looking at what happens when we manipulate the k-space and undersample it. Acquiring one line of k-space at a time we have seen in the previous section can be very slow and tedious and would be a very long scan if we collected many slices and a high-resolution in vivo. In this section we will simulate different ways of undersampling the data and its effect on the image output.
+
+\subsubsection{Matlab Code}
+A small Matlab script has been provided. It is a live notebook, so you can load individual cells and the resultant images that may appear are below. Please have the .mat data file and the script in the same folder.  
+
+
+\subsubsection{Undersampling K-space}
+Instead of acquiring undersampled data, we will modify this dataset and “simulate” undersampling conditions. In other words, we can create “mask” matrices that consist of 1s and 0s and multiply it with our k-space data to simulate undersampling. This will delete the lines with the 0s and keep the ones with 1s. 
+
+\vspace{5mm} 
+
+\noindent{} Run the Matlab Code for the undersampling section with the following masking instructions:
+
+\vspace{5mm} 
+ 
+\noindent{}\color{red}Q: Zero every other row in k-space and display the resultant k-space and the image. Comment on the image you reconstruct.
+
+\color{black}
+\vspace{5mm} 
+
+\noindent{}\color{red}Q: Zero every other column in k-space and display the resultant k-space and the image. Comment on the image you reconstruct.
+\color{black}
+
+\vspace{5mm} 
+
+\noindent{}\color{red}Q: Zero 2/3 of the k-space columns (keep one column, zero 2 columns) and display the resultant k-space and the image. Comment on the image you reconstruct.
+\color{black}
+
+\subsubsection{Lowpass/ High Pass Filters}
+K-space is the 2D spatial frequency domain. Different frequenies encodes different types of information. We are going to investigate the role of low and high frequencies in the reconstruction of an image. We can isolate the two components by designing filters that keep only the frequencies we are interested in. Low-pass filters remove all the high frequencies leaving only low frequencies, and High-pass filters perform in the opposite manner. Therefore, we will apply a low-pass and high-pass filter to the image. Follow the directions in the questions below and include figures in your lab writeup. 
+  
+\vspace{5mm} 
+
+\noindent{}\color{red}Q: Zero the center 50\% of the k-space. Take the inverse Fourier transform and display your image. Comment on how this image compares to the original. 
+\color{black}
+
+\vspace{5mm} 
+
+\noindent{}\color{red}Q: Zero the outer 50\% of the k-space. Take the inverse Fourier transform and display your image. Comment on how this image compares to the original. 
+\color{black}
+
+\vspace{5mm} 
