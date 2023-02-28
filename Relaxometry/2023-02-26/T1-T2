@@ -1,0 +1,33 @@
+# Relaxometry measurements taken February 26, 2023
+
+Expected values are based on 1.5 T measurements reported in a 2022 study of phantom relaxometry [^1].
+Expected T2 values are copied directly from this paper.
+Expected T1 values are estimated using the B0^(1/3) power law (see https://mriquestions.com/bo-effect-on-t1--t2.html).
+
+All measured time constants were computed by the Relax 2.0 program using linear fit to the log of the decay curve.
+
+All values in milliseconds.
+
+## T2 measured with Saturation Recovery Spin Echo, varied TE
+
+| Material        | Expected | Ocra1 | Ocra2 | Ocra3 |
+|-----------------|----------|-------|-------|-------|
+| Olive oil       | 55       | 65    | 64    | 63    |
+| Agar (2%)       | 46       | 124   | 102   | 101   |
+| Agar (1%)       | ?        | 119   | 100   | 119   |
+| Agar (1%)       | ?        | 110   | 106   | 111   |
+| Distilled water | ?        | 359   | 115   | 172   |
+
+
+## T1 measured with Inversion Recovery Spin Echo, varied TI
+
+| Material        | Expected | Ocra1 | Ocra2 | Ocra3 |
+|-----------------|----------|-------|-------|-------|
+| Olive oil       | 108      | 104   | 103   | 109   |
+| Agar (2%)       | 931      | 989   | 892   | 839   |
+| Agar (1%)       | ?        | 982   | 953   | 1088  |
+| Agar (1%)       | ?        | 922   | 1012  | 1028  |
+| Distilled water | 1185     | 1921  | 2090  | 1403  |
+
+
+[^1]: Antoniou A, Georgiou L, Christodoulou T, et al. MR relaxation times of agar-based tissue-mimicking phantoms. J Appl Clin Med Phys. 2022;23(5):e13533. doi:10.1002/acm2.13533
