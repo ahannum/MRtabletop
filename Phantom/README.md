@@ -21,3 +21,12 @@ Combine boiling water and agar powder in 1% concentration (by weight) and stir. 
 Tip: immerse the tube and pipette in hot water beforehand to minimize premature setting during the fill process.
 
 Tip: Chill in fridge for at least 10 min for a good set before adding any other material to the phantom.
+
+
+## Potential Products
+These are links to test tubes and caps that likely are compatible with the tabletops
+- https://www.fishersci.com/shop/products/kontes-nmr-sample-tube-caps-2/K8970950011?ef_id=CjwKCAiAu5agBhBzEiwAdiR5tDJKUHqBbphx7vePhWoRpYbKMzBox08YfbHs3Z4VcC0mTY32g7izQBoCjOUQAvD_BwE:G:s&ppc_id=PLA_goog_2086145674_92493245187_K8970950011__411338805568_15556575757418499309&ev_chn=shop&s_kwcid=AL!4428!3!411338805568!!!g!860332652605!&gclid=CjwKCAiAu5agBhBzEiwAdiR5tDJKUHqBbphx7vePhWoRpYbKMzBox08YfbHs3Z4VcC0mTY32g7izQBoCjOUQAvD_BwE
+- https://www.grainger.com/product/KIMBLE-NMR-Pressure-Cap-Polyethylene-52NE65
+- https://www.grainger.com/product/KIMBLE-NMR-Tube-10-mm-Labware-Outside-8TJE7
+
+
