@@ -28,5 +28,6 @@ These are links to test tubes and caps that likely are compatible with the table
 - https://www.fishersci.com/shop/products/kontes-nmr-sample-tube-caps-2/K8970950011?ef_id=CjwKCAiAu5agBhBzEiwAdiR5tDJKUHqBbphx7vePhWoRpYbKMzBox08YfbHs3Z4VcC0mTY32g7izQBoCjOUQAvD_BwE:G:s&ppc_id=PLA_goog_2086145674_92493245187_K8970950011__411338805568_15556575757418499309&ev_chn=shop&s_kwcid=AL!4428!3!411338805568!!!g!860332652605!&gclid=CjwKCAiAu5agBhBzEiwAdiR5tDJKUHqBbphx7vePhWoRpYbKMzBox08YfbHs3Z4VcC0mTY32g7izQBoCjOUQAvD_BwE
 - https://www.grainger.com/product/KIMBLE-NMR-Pressure-Cap-Polyethylene-52NE65
 - https://www.grainger.com/product/KIMBLE-NMR-Tube-10-mm-Labware-Outside-8TJE7
+- https://www.dwk.com/na/kimble-kontes-disposable-grade-nmr-tube-10-mm-7-in-100-mhz-897300-0000
 
 
