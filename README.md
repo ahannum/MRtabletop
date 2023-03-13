@@ -43,9 +43,12 @@ Reducing FOV does not shorten scan time as expected (fewer phase encode lines)
 -	Alex suspects this is more of a suboptimal UI design than a bug: the “Resolution” field does not set pixel size directly, but rather the number of pixels (the image matrix size). Hence changes to the field of view result in inversely proportional changes to the pixel size in order to preserve the matrix size.
 
 Unexpected bimodal signal observed in FID spectrum
--	Observed by Mark using multi-component phantom
+-	Observed by Daniel & Mark using agar/oil phantom
 -	TODO further investigation is needed comparing FID vs spin echo for single- and multi-component phantoms and recording the parameters used
 -	TODO check whether poor shim could explain
+
+Time signal becomes zero at long sampling times
+- Observed by Daniel
 
 
 ## Feature Requests
