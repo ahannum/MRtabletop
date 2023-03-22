@@ -31,9 +31,9 @@ We begin by inspecting the spin echo spectrum for this multi-compartment phantom
 \end{enumerate}
 
 \color{red}
-\noindent You learned in class that the resonant frequency of fatty tissue (oil here) differs from watery tissue (agar here) due to an electron shielding effect called chemical shift. Why do we only see one peak in the spectrum? How could this experiment be modified to resolve the two peaks? (without changing the phantom itself)
+\noindent You learned in class that the resonant frequency of fatty tissue (oil here) differs from watery tissue (agar here) due to an electron shielding effect called chemical shift. Why do we only see one peak in the spectrum? How \emph{could} this experiment be modified to resolve the two peaks (without changing the phantom itself)? Hint: your answer may well go beyond the current capabilities of the tabletop system by changing/improving hardware or software.
 \color{black}
-% soln: increase sampling time to improve spectral resolution, but also need better B0 homogeneity for this to actually help. Or, use a stronger main field to increase the spectral separation
+% soln: increase sampling time to improve spectral resolution, but also need better B0 homogeneity for this to actually help. Or, use a stronger main field to increase the spectral separation. Or introduce a gradient to spatially resolve the two, then rely on contrast (e.g. T1, T2) to separate.
 
 \subsubsection{Projection with $T_2$ Contrast} \label{sec:proj-T2}
 
@@ -100,7 +100,7 @@ Now we will explore $T_1$ weighting as an alternative means of contrast for this
 
 \subsubsection{2D Imaging with $T_1$ Nulling} \label{sec:2d-T1}
 
-Fat signal can be a nuisance for clinical MRI, so many techniques have been developed to remove this signal. One such approach involving is called TI-nulling. This approach uses an inversion recovery (IR) sequence with the inversion time (TI) parameter tuned to suppress a particular $T_1$ species. We will use this approach to suppress the ``fat'' signal in this phantom.
+Fat signal can be a nuisance for clinical MRI, so many techniques have been developed to remove this signal. One such approach is called TI-nulling. This approach uses an inversion recovery (IR) sequence with the inversion time (TI) parameter tuned to suppress a particular $T_1$ species. We will use this approach to suppress the ``fat'' signal in this phantom.
 
 \color{red}
 Calculate the TI needed to null the oil signal using the $T_1$ you measured in the relaxometry module. Hint: you should have already derived the necessary equation for this calculation in the relaxometry module. Your sketch of the sequence may also be helpful to reference.
