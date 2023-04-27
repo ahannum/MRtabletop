@@ -47,6 +47,7 @@ Below is a running list of ideas for new lab exercises.
       - comment on agreement with SNR ~ dx * dx * dz and SNR ~ sqrt(N_ave)
     - see if you can break the p.165 “rule of thumb” by repeating the experiment with a much larger voxel size
       - where is the breaking point? can you explain this by looking at the k-space roll-off?
-
+- Spectroscopic Phantoms
+  - Water and Ethanol
 
 [1] Nishimura, Dwight G. Principles of Magnetic Resonance Imaging, Lulu.com, 2010.
