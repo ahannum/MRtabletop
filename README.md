@@ -21,7 +21,7 @@ March 9: updated to latest release of Relax 2.0 software
 
 February 28: gradient channels y and z2 not working
 - As evidenced by shim calibration returning flat lines for these channels
--	TODO Alex & Ariel: bring ocra2 to Thomas at Q-Bio end of March to investigate
+-	TODO Ariel - pick up Tabletop from Q-Bio
 
 ### Ocra3
 
